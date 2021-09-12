@@ -1,0 +1,568 @@
+[
+{
+    "info":{
+        "companyName":"ABC Company",
+        "founded":1998,
+        "ceo":"Rebecca Roberts",
+        "location":{
+            "city":"Dallas",
+            "state":"Texas"
+        },
+        "industy":"education"
+    },
+    "status":"new",
+    "keyContacts":[
+        {
+            "name":"Joe Jones",
+            "role":"CFO",
+            "phone": 1231231234,
+            "email":"joe@abccompany.com"
+        },
+        {
+            "name":"Meg Miller",
+            "role":"VP of Opperations",
+            "phone": 1231231234,
+            "email":"meg@abccompany.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
+        },
+        {
+            "year":"2019",
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
+        },
+        {
+            "year":"2018",
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
+        }
+    ],
+    "inHouseContact":"Jane Doe"
+},
+{
+    "info":{
+        "companyName":"XYZ Company",
+        "founded":2001,
+        "ceo":"Laurie Lee",
+        "location":{
+            "city":"Richmond",
+            "state":"Virginia"
+        },
+        "industy":"Food Distribution"
+    },
+    "status":"pending",
+    "keyContacts":[
+        {
+            "name":"Abigail Adams",
+            "role":"VP of Operations",
+            "phone": 1231231234,
+            "email":"abigail@company.com"
+        },
+        {
+            "name":"Jon Jones",
+            "role":"Some Important Role",
+            "phone": 1231231234,
+            "email":"jon@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":1000000,
+            "grossProfit":800000,
+            "totalExpenses":362900,
+            "preTaxEarnings":437100,
+            "taxes":240000,
+            "netEarnings":197100
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Bill Bass"
+},
+{
+    "info":{
+        "companyName":"Another Company",
+        "founded":1976,
+        "ceo":"Sam Guy",
+        "location":{
+            "city":"Raleigh",
+            "state":"North Carolina"
+        },
+        "industy":"Vitamins"
+    },
+    "status":"declined",
+    "keyContacts":[
+        {
+            "name":"Rhonda Rol",
+            "role":"Something Important",
+            "phone": 1231231234,
+            "email":"rhonda@company.com"
+        }
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Mindy Mousie"
+},
+{
+    "info":{
+        "companyName":"Reading Rainbow",
+        "founded":1983,
+        "ceo":"LeVar Burton",
+        "location":{
+            "city":"Los Angeles",
+            "state":"Califonia"
+        },
+        "industy":"Publishing"
+    },
+    "status":"approved",
+    "keyContacts":[
+        {
+            "name":"Judy Blume",
+            "role":"Author",
+            "phone": 1231231234,
+            "email":"judy@company.com"
+        },
+        {
+            "name":"Arnold Loble",
+            "role":"Author",
+            "phone": 1231231234,
+            "email":"arnold@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Jane Doe"
+},
+{
+    "info":{
+        "companyName":"Dunder Mifflin",
+        "founded":1949,
+        "ceo":"David Wallace",
+        "location":{
+            "city":"New York",
+            "state":"New York"
+        },
+        "industy":"Paper"
+    },
+    "status":"new",
+    "keyContacts":[
+        {
+            "name":"Michael Scott",
+            "role":"Regonal Manager",
+            "phone": 1231231234,
+            "email":"michael@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Mindy Mousie"
+},
+{
+    "info":{
+        "companyName":"The Best Company",
+        "founded":1975,
+        "ceo":"A. Reallygreat Gal",
+        "location":{
+            "city":"Atlanta",
+            "state":"Georgia"
+        },
+        "industy":"Something Amazing"
+    },
+    "status":"pending",
+    "keyContacts":[
+        {
+            "name":"M.R. Niceguy",
+            "role":"CFO",
+            "phone": 1231231234,
+            "email":"mr@company.com"
+        },
+        {
+            "name":"Norm Nally",
+            "role":"VP of Sales",
+            "phone": 1231231234,
+            "email":"norm@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Bill Bass"
+},
+{
+    "info":{
+        "companyName":"The Grocery Store",
+        "founded":1998,
+        "ceo":"Haman Cheese",
+        "location":{
+            "city":"Philadelphia",
+            "state":"Pennsylvania"
+        },
+        "industy":"Food"
+    },
+    "status":"approved",
+    "keyContacts":[
+        {
+            "name":"Jimmy Dean",
+            "role":"Director of Breakfast Foods",
+            "phone": 1231231234,
+            "email":"jimmy@company"
+        }
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Mindy Mousie"
+},
+{
+    "info":{
+        "companyName":"Carter Corp.",
+        "founded":1988,
+        "ceo":"Betty Carter",
+        "location":{
+            "city":"Smithfield",
+            "state":"North Carolina"
+        },
+        "industy":"Pet Care"
+    },
+    "status":"pending",
+    "keyContacts":[
+        {
+            "name":"Charlie Daycat",
+            "role":"Ruler of the nightcat",
+            "phone": 1231231234,
+            "email":"charles@company.com"
+        },
+        {
+            "name":"Kitten Mittens",
+            "role":"mitten tester",
+            "phone": 1231231234,
+            "email":"kitten@company.com"
+        },
+        {
+            "name":"Turtle Meow",
+            "role":"bug chaser",
+            "phone": 1231231234,
+            "email":"turtle@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Bill Bass"
+},
+{
+    "info":{
+        "companyName":"Artastic",
+        "founded":2010,
+        "ceo":"Bob Ross",
+        "location":{
+            "city":"Chicago",
+            "state":"Illinois"
+        },
+        "industy":"Art Supplies"
+    },
+    "status":"new",
+    "keyContacts":[
+        {
+            "name":"Jackson Pollock",
+            "role":"The color guy",
+            "phone": 1231231234,
+            "email":"jackson@company.com"
+        },
+        {
+            "name":"Mary Cassatt",
+            "role":"Painter extraordinaire",
+            "phone": 1231231234,
+            "email":"mary@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Jane Doe"
+},
+{
+    "info":{
+        "companyName":"Oh boy Records",
+        "founded":1998,
+        "ceo":"Jone Prine",
+        "location":{
+            "city":"Nashville",
+            "state":"Tennessee"
+        },
+        "industy":"Music"
+    },
+    "status":"new",
+    "keyContacts":[
+        {
+            "name":"Dan Reeder",
+            "role":"Recoding Artist",
+            "phone": 1231231234,
+            "email":"dan@company.com"
+        },
+        {
+            "name":"Emily Scott Robinson",
+            "role":"Recording Artist",
+            "phone": 1231231234,
+            "email":"emily@company.com"
+        }
+        
+    ],
+    "financialRecords":[
+        {
+            "year":"2020",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2019",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        },
+        {
+            "year":"2018",
+            "revenue":0,
+            "grossProfit":0,
+            "totalExpenses":0,
+            "preTaxEarnings":0,
+            "taxes":0,
+            "netEarnings":0
+        }
+    ],
+    "inHouseContact":"Jane Doe"
+}
+]

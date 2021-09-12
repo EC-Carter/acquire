@@ -1,8 +1,8 @@
-
+import Landing from './components/Landing'
 function App() {
   return (
-    <div className="App">
-      testing
+    <div className="">
+    <Landing/>
     </div>
   );
 }
