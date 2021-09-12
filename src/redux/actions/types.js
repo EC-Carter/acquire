@@ -1,0 +1,3 @@
+
+
+export const SET_INITAL_DATA = "SET_INITIAL_DATA";
