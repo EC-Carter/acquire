@@ -1,5 +1,8 @@
 
-import { SET_INITAL_DATA } from '../actions/types'
+import { SET_INITAL_DATA } from '../actions/types';
+import { DELETE_TARGET } from '../actions/types';
+import { UPDATE_TARGET } from '../actions/types';
+import { ADD_TARGET } from '../actions/types';
 
 const reducer = (state,action) => {
     if(state === undefined){
