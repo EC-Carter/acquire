@@ -1,24 +1,36 @@
 import React, { useEffect,useState }from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams,useHistory } from 'react-router-dom';
+
+import { deleteTarget } from '../redux/actions/actions';
+
+import {Button} from 'react-bootstrap';
 
 
 const TargetDisplay = () => {
-    const targets = useSelector(state => state.targets)
+    const targets = useSelector(state => state.targets);
     const { name } = useParams();
+    const history = useHistory();
+    const dispatch = useDispatch();
     
     let companyArr = targets.filter(target => target.info.companyName === name)
     let company = companyArr[0];
     
-    
+    const handleDelete = (id) => {
+        dispatch(deleteTarget(id))
+        history.push('/maindisplay')
 
-    console.log(company)
+    }
+
+
+    
 
     return (
         <>
         <div>
-            <h3>{company.info.companyName}</h3>
+            <h3 style={{display:"inline-block"}}>{company.info.companyName}</h3>
+            <Button className="ms-2" onClick={()=>handleDelete(company.id)}>Delete</Button>
             <h6>{`Status: ${company.status}`}</h6>
             <h6>{`In House Contact: ${company.inHouseContact}`}</h6>
             <ul>
@@ -27,7 +39,7 @@ const TargetDisplay = () => {
                 <li>{` Industry : ${company.info.industy}`}</li>
                 <li>{` Located : ${company.info.location.city}, ${company.info.location.state}`}</li>
             </ul>
-           
+
             <h5>Company Contacts</h5>
             {company.keyContacts.map(contact =>{
                 return (

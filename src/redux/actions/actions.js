@@ -13,10 +13,10 @@ export const setInital = initalData => {
     }
 }
 
-export const deleteTarget = target => {
+export const deleteTarget = id => {
     return{
         type:DELETE_TARGET,
-        target
+        id
     }
 }
 export const addTarget = target => {
