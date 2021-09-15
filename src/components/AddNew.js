@@ -1,9 +1,11 @@
 import React from 'react';
+import AddEditForm from './AddEditForm'
 
 const AddNew = () => {
   return (
     <>
-      Add new
+    <AddEditForm formLabel={"Add New"} buttonText={"Add"}/>
+
     </>
   )
 }

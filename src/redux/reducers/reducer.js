@@ -30,6 +30,12 @@ const reducer = (state,action) => {
                 })]
             }
 
+        case ADD_TARGET:
+            return{
+                ...state,
+                targets:[...state.targets,action.target]
+            }
+
 
         default:
             return state;
