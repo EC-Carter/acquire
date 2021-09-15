@@ -8,7 +8,7 @@
             "city":"Dallas",
             "state":"Texas"
         },
-        "industy":"education"
+        "industry":"education"
     },
     "status":"new",
     "keyContacts":[
@@ -67,7 +67,7 @@
             "city":"Richmond",
             "state":"Virginia"
         },
-        "industy":"Food Distribution"
+        "industry":"Food Distribution"
     },
     "status":"pending",
     "keyContacts":[
@@ -126,7 +126,7 @@
             "city":"Raleigh",
             "state":"North Carolina"
         },
-        "industy":"Vitamins"
+        "industry":"Vitamins"
     },
     "status":"declined",
     "keyContacts":[
@@ -178,7 +178,7 @@
             "city":"Los Angeles",
             "state":"Califonia"
         },
-        "industy":"Publishing"
+        "industry":"Publishing"
     },
     "status":"approved",
     "keyContacts":[
@@ -237,7 +237,7 @@
             "city":"New York",
             "state":"New York"
         },
-        "industy":"Paper"
+        "industry":"Paper"
     },
     "status":"new",
     "keyContacts":[
@@ -290,7 +290,7 @@
             "city":"Atlanta",
             "state":"Georgia"
         },
-        "industy":"Something Amazing"
+        "industry":"Something Amazing"
     },
     "status":"pending",
     "keyContacts":[
@@ -349,7 +349,7 @@
             "city":"Philadelphia",
             "state":"Pennsylvania"
         },
-        "industy":"Food"
+        "industry":"Food"
     },
     "status":"approved",
     "keyContacts":[
@@ -401,7 +401,7 @@
             "city":"Smithfield",
             "state":"North Carolina"
         },
-        "industy":"Pet Care"
+        "industry":"Pet Care"
     },
     "status":"pending",
     "keyContacts":[
@@ -466,7 +466,7 @@
             "city":"Chicago",
             "state":"Illinois"
         },
-        "industy":"Art Supplies"
+        "industry":"Art Supplies"
     },
     "status":"new",
     "keyContacts":[
@@ -525,7 +525,7 @@
             "city":"Nashville",
             "state":"Tennessee"
         },
-        "industy":"Music"
+        "industry":"Music"
     },
     "status":"new",
     "keyContacts":[

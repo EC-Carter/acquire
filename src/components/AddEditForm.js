@@ -1,5 +1,5 @@
-import React,{ useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React,{ useState,useEffect } from 'react';
+import { useDispatch,useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { Form,Button,Col, } from 'react-bootstrap';
@@ -8,26 +8,28 @@ import { stateArray } from '../data/states';
 import { yearsBetween } from '../utilities/years';
 
 import { addTarget } from '../redux/actions/actions';
+import { updateTarget } from '../redux/actions/actions';
+import { setIsEdit } from '../redux/actions/actions';
 
 
-const AddEditForm = ({formLabel,buttonText,isEdit}) => {
+const AddEditForm = ({formLabel,buttonText,company}) => {
+
     const dispatch = useDispatch();
     const history = useHistory();
 
+    const isEdit = useSelector(state => state.isEdit);
+
+
+
     // local state for controlled inputs
-
-
     const [companyName, setCompanyName] = useState('');
     const [founded, setFounded] = useState(0);
     const [ceo, setCeo] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
     const [industry, setIndustry] = useState('');
-
     const [status, setStatus] = useState('new');
-
     const [contactList, setContactList] = useState([{name:"",role:"",phone:"",email:""}])
-
     const [fl1, setFl1] = useState({
         "year":"",
         "revenue":0,
@@ -56,6 +58,24 @@ const AddEditForm = ({formLabel,buttonText,isEdit}) => {
         "netEarnings":0
         })
 
+        useEffect(() => {
+            if(isEdit){
+                setCompanyName(company.info.companyName);
+                setFounded(company.info.founded);
+                setCeo(company.info.ceo);
+                setCity(company.info.location.city);
+                setState(company.info.location.state);
+                setIndustry(company.info.industry);
+                setStatus(company.status);
+                setContactList(company.keyContacts);
+                setFl1(company.financialRecords[0]);
+                setFl2(company.financialRecords[0]);
+                setFl3(company.financialRecords[0]);
+            }
+            
+            
+        }, [])
+
 
     const years = yearsBetween();
 
@@ -79,8 +99,32 @@ const AddEditForm = ({formLabel,buttonText,isEdit}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (isEdit){
-            
-        }
+            let newTarget = {
+                id:company.id,
+                info:{
+                    companyName,
+                    founded,
+                    ceo,
+                    location:{
+                        city,
+                        state
+                    }
+                },
+                    industry,
+                    status,
+                    keyContacts:contactList,
+                    financialRecords:[
+                        fl1,
+                        fl2,
+                        fl3
+                    ]                
+            }
+            dispatch(updateTarget(newTarget));
+            dispatch(setIsEdit(false))
+            // history.push('/maindisplay')
+
+        } else {
+
         let newTarget = {
             id:uuidv4(),
             info:{
@@ -104,6 +148,7 @@ const AddEditForm = ({formLabel,buttonText,isEdit}) => {
         }
         dispatch(addTarget(newTarget));
         history.push('/maindisplay')
+        }
     }
     
     return (

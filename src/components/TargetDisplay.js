@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams,useHistory } from 'react-router-dom';
 
 import { deleteTarget } from '../redux/actions/actions';
+import { setIsEdit } from '../redux/actions/actions';
+
 
 import {Button} from 'react-bootstrap';
 
@@ -11,15 +13,27 @@ import  AddEditForm from './AddEditForm';
 
 
 const TargetDisplay = () => {
+
     const targets = useSelector(state => state.targets);
+    const isEdit = useSelector(state => state.isEdit);
+
     const { name } = useParams();
     const history = useHistory();
     const dispatch = useDispatch();
-    const [isEdit, setIsEdit] = useState(false)
+    const [company, setCompany] = useState({});
     
-    let companyArr = targets.filter(target => target.info.companyName === name)
-    let company = companyArr[0];
+    useEffect(() => {
+            let companyArr = targets.filter(target => target.info.companyName === name);
+            let target = {...companyArr[0]};
+            console.log(target);
+            setCompany(target)
+    }, [targets])
+
+    console.log(company)
+
     
+    
+
     const handleDelete = id => {
         dispatch(deleteTarget(id))
         history.push('/maindisplay')
@@ -27,7 +41,9 @@ const TargetDisplay = () => {
     }
 
     const handleEdit = id => {
-        setIsEdit(true)
+        dispatch(setIsEdit(true))
+        
+
     }
 
 
@@ -35,7 +51,7 @@ const TargetDisplay = () => {
 
     return (
         <>
-        {isEdit ? <AddEditForm formLabel={`Edit ${company.info.companyName}`} buttonText={"Update"} isEdit={true}/>:
+        {isEdit ? <AddEditForm formLabel={`Edit ${company.info.companyName}`} buttonText={"Update"} company={company}/>:
         <div>
             <h3 style={{display:"inline-block"}}>{company.info.companyName}</h3>
             <Button className="ms-2" onClick={()=>handleDelete(company.id)}>Delete</Button>
@@ -45,7 +61,7 @@ const TargetDisplay = () => {
             <ul>
                 <li>{` CEO : ${company.info.ceo}`}</li>
                 <li>{` Founded : ${company.info.founded}`}</li>
-                <li>{` Industry : ${company.info.industy}`}</li>
+                <li>{` Industry : ${company.info.industry}`}</li>
                 <li>{` Located : ${company.info.location.city}, ${company.info.location.state}`}</li>
             </ul>
 

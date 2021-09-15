@@ -18,14 +18,15 @@ const MainDispalay = () => {
         <>
         <Button as={Link} to="/addnew">Add New</Button>
         <div>
-        {targets.map((target,index) => {
+        {targets.map((target) => {
             return (
             <>
-                <p style={{display:"inline-block",width:"245px"}} key={index}>{target.info.companyName}</p>
-                <p style={{display:"inline-block",margin:"10px"}} key={index}>{target.status}</p>
+                <div key ={target.id}>
+                <p style={{display:"inline-block",width:"245px"}} >{target.info.companyName}</p>
+                <p style={{display:"inline-block",margin:"10px"}} >{target.status}</p>
                 <Button as={Link} to={`/detail/${target.info.companyName}`}>More</Button>
                 <Button className="ms-2" onClick={()=>dispatch(deleteTarget(target.id))}>Delete</Button>
-                <br/>
+                </div>
             </>
             )
         })}
