@@ -1,5 +1,5 @@
 [
-{
+{   "id":"78dbb19a-ea46-445a-b6b8-e6253358a5a7",
     "info":{
         "companyName":"ABC Company",
         "founded":1998,
@@ -8,7 +8,7 @@
             "city":"Dallas",
             "state":"Texas"
         },
-        "industy":"education"
+        "industry":"education"
     },
     "status":"new",
     "keyContacts":[
@@ -58,6 +58,7 @@
     "inHouseContact":"Jane Doe"
 },
 {
+    "id":"31ae0821-8557-4804-a9ca-0f1828794e19",
     "info":{
         "companyName":"XYZ Company",
         "founded":2001,
@@ -66,7 +67,7 @@
             "city":"Richmond",
             "state":"Virginia"
         },
-        "industy":"Food Distribution"
+        "industry":"Food Distribution"
     },
     "status":"pending",
     "keyContacts":[
@@ -116,6 +117,7 @@
     "inHouseContact":"Bill Bass"
 },
 {
+    "id":"663aed57-cb29-4b2a-b38c-f3f1512e7dc8",
     "info":{
         "companyName":"Another Company",
         "founded":1976,
@@ -124,7 +126,7 @@
             "city":"Raleigh",
             "state":"North Carolina"
         },
-        "industy":"Vitamins"
+        "industry":"Vitamins"
     },
     "status":"declined",
     "keyContacts":[
@@ -166,7 +168,8 @@
     ],
     "inHouseContact":"Mindy Mousie"
 },
-{
+{    
+    "id":"2e1ad176-5868-43e1-a0b2-d05dc58c80c0",
     "info":{
         "companyName":"Reading Rainbow",
         "founded":1983,
@@ -175,7 +178,7 @@
             "city":"Los Angeles",
             "state":"Califonia"
         },
-        "industy":"Publishing"
+        "industry":"Publishing"
     },
     "status":"approved",
     "keyContacts":[
@@ -225,6 +228,7 @@
     "inHouseContact":"Jane Doe"
 },
 {
+    "id":"8c5d8de3-7110-4fd9-8ee7-4e925de7373a",
     "info":{
         "companyName":"Dunder Mifflin",
         "founded":1949,
@@ -233,7 +237,7 @@
             "city":"New York",
             "state":"New York"
         },
-        "industy":"Paper"
+        "industry":"Paper"
     },
     "status":"new",
     "keyContacts":[
@@ -277,6 +281,7 @@
     "inHouseContact":"Mindy Mousie"
 },
 {
+    "id":"b2c79089-095e-4f20-a3dc-ff4fc944f54b",
     "info":{
         "companyName":"The Best Company",
         "founded":1975,
@@ -285,7 +290,7 @@
             "city":"Atlanta",
             "state":"Georgia"
         },
-        "industy":"Something Amazing"
+        "industry":"Something Amazing"
     },
     "status":"pending",
     "keyContacts":[
@@ -335,6 +340,7 @@
     "inHouseContact":"Bill Bass"
 },
 {
+    "id":"06a3f2b9-0a1b-4aa7-8726-d25967a4e4e4",
     "info":{
         "companyName":"The Grocery Store",
         "founded":1998,
@@ -343,7 +349,7 @@
             "city":"Philadelphia",
             "state":"Pennsylvania"
         },
-        "industy":"Food"
+        "industry":"Food"
     },
     "status":"approved",
     "keyContacts":[
@@ -386,6 +392,7 @@
     "inHouseContact":"Mindy Mousie"
 },
 {
+    "id":"8c4f87af-5201-401a-b904-61250c37c721",
     "info":{
         "companyName":"Carter Corp.",
         "founded":1988,
@@ -394,7 +401,7 @@
             "city":"Smithfield",
             "state":"North Carolina"
         },
-        "industy":"Pet Care"
+        "industry":"Pet Care"
     },
     "status":"pending",
     "keyContacts":[
@@ -450,6 +457,7 @@
     "inHouseContact":"Bill Bass"
 },
 {
+    "id":"44b0936a-c19b-4ae7-9983-edcf7f97cee1",
     "info":{
         "companyName":"Artastic",
         "founded":2010,
@@ -458,7 +466,7 @@
             "city":"Chicago",
             "state":"Illinois"
         },
-        "industy":"Art Supplies"
+        "industry":"Art Supplies"
     },
     "status":"new",
     "keyContacts":[
@@ -508,6 +516,7 @@
     "inHouseContact":"Jane Doe"
 },
 {
+    "id":"e74d358c-f290-4388-8787-84785cbf1815",
     "info":{
         "companyName":"Oh boy Records",
         "founded":1998,
@@ -516,7 +525,7 @@
             "city":"Nashville",
             "state":"Tennessee"
         },
-        "industy":"Music"
+        "industry":"Music"
     },
     "status":"new",
     "keyContacts":[
