@@ -1,18 +1,10 @@
 
-import { SET_INITAL_DATA } from '../actions/types';
+
 import { DELETE_TARGET } from '../actions/types';
 import { UPDATE_TARGET } from '../actions/types';
 import { ADD_TARGET } from '../actions/types';
 import { IS_EDIT} from '../actions/types';
-
-
-export const setInital = initalData => {
-    
-    return{
-        type:SET_INITAL_DATA,
-        data:initalData
-    }
-}
+import { SET_TARGET_TO_UPDATE } from '../actions/types';
 
 export const deleteTarget = id => {
     return{
@@ -37,6 +29,14 @@ export const setIsEdit = value => {
     return{
         type:IS_EDIT,
         value
+    
+    }
+}
+
+export const setTargetToUpdate = target => {
+    return{
+        type:SET_TARGET_TO_UPDATE,
+        target
     
     }
 }

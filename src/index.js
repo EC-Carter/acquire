@@ -22,32 +22,32 @@ import AddNew from './components/AddNew'
 
 //create store and save global state to session
 
-// const saveToSessionStorage = (globalState) => {
-//   try{
-//     const serializedState = JSON.stringify(globalState);
-//     sessionStorage.setItem('state',serializedState);
-//   }
-//   catch(e){
-//     console.log(e)
-//   }
-// }
+const saveToSessionStorage = (globalState) => {
+  try{
+    const serializedState = JSON.stringify(globalState);
+    sessionStorage.setItem('state',serializedState);
+  }
+  catch(e){
+    console.log(e)
+  }
+}
 
-// const loadFromSessionStorage = () => {
-//   const serializedState = sessionStorage.getItem('state');
-//   if(serializedState == null){
-//     return undefined;
-//   } else {
-//     return JSON.parse(serializedState);
-//   }
-// }
+const loadFromSessionStorage = () => {
+  const serializedState = sessionStorage.getItem('state');
+  if(serializedState == null){
+    return undefined;
+  } else {
+    return JSON.parse(serializedState);
+  }
+}
 
-// const persistedState = loadFromSessionStorage();
+ const persistedState = loadFromSessionStorage();
 
-let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+let store = createStore(reducer,persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-// store.subscribe(() => {
-//   saveToSessionStorage(store.getState());
-// })
+store.subscribe(() => {
+  saveToSessionStorage(store.getState());
+})
 
 
 ReactDOM.render(
