@@ -1,7 +1,7 @@
 import React, { useEffect,useState }from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams,useHistory } from 'react-router-dom';
+import { useParams,useHistory,Link } from 'react-router-dom';
 
 import { deleteTarget } from '../redux/actions/actions';
 import { setIsEdit } from '../redux/actions/actions';
@@ -16,24 +16,18 @@ const TargetDisplay = () => {
 
     const targets = useSelector(state => state.targets);
     const isEdit = useSelector(state => state.isEdit);
+    const targetToUpdate = useSelector(state => state.targetToUpdate);
 
-    const { name } = useParams();
+    //const { name } = useParams();
     const history = useHistory();
-    const dispatch = useDispatch();
-    const [company, setCompany] = useState({});
-    
-    useEffect(() => {
-            let companyArr = targets.filter(target => target.info.companyName === name);
-            let target = {...companyArr[0]};
-            console.log(target);
-            setCompany(target)
-    }, [targets])
+    const dispatch = useDispatch();  
+    let company = targetToUpdate;
 
+    
+    console.log(targets)
     console.log(company)
-
+            
     
-    
-
     const handleDelete = id => {
         dispatch(deleteTarget(id))
         history.push('/maindisplay')
@@ -56,6 +50,8 @@ const TargetDisplay = () => {
             <h3 style={{display:"inline-block"}}>{company.info.companyName}</h3>
             <Button className="ms-2" onClick={()=>handleDelete(company.id)}>Delete</Button>
             <Button className="ms-2" onClick={()=>handleEdit(company.id)}>Edit</Button>
+            <Button className="ms-2" as={Link} to="/maindisplay">Back to main</Button>
+
             <h6>{`Status: ${company.status}`}</h6>
             <h6>{`In House Contact: ${company.inHouseContact}`}</h6>
             <ul>
