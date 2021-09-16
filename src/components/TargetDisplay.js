@@ -7,7 +7,7 @@ import { deleteTarget } from '../redux/actions/actions';
 import { setIsEdit } from '../redux/actions/actions';
 
 
-import {Button} from 'react-bootstrap';
+import { Button,Row,Col } from 'react-bootstrap';
 
 import  AddEditForm from './AddEditForm';
 
@@ -46,14 +46,29 @@ const TargetDisplay = () => {
     return (
         <>
         {isEdit ? <AddEditForm formLabel={`Edit ${company.info.companyName}`} buttonText={"Update"} company={company}/>:
-        <div>
+        <div className="mont-font">
+            <Row className="mt-2 bg-tan mx-5 my-2 p-2">
+            <Col md={5} className="d-flex align-items-center justify-content-center">
             <h3 style={{display:"inline-block"}}>{company.info.companyName}</h3>
-            <Button className="ms-2" onClick={()=>handleDelete(company.id)}>Delete</Button>
-            <Button className="ms-2" onClick={()=>handleEdit(company.id)}>Edit</Button>
-            <Button className="ms-2" as={Link} to="/maindisplay">Back to main</Button>
-
+            </Col>
+            <Col className="d-flex align-items-center justify-content-center">
+            <Button className="ms-2" onClick={()=>handleDelete(company.id)} variant="outline-dark" className="mont-font rounded-0 ">Delete</Button>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-center">
+            <Button className="ms-2" onClick={()=>handleEdit(company.id)} variant="outline-dark" className="mont-font rounded-0 ">Edit</Button>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-center">
+            <Button className="ms-2" as={Link} to="/maindisplay" variant="outline-dark" className="mont-font rounded-0 ">Back to main</Button>
+            </Col>
+            </Row>
+            <Row>
+            <Col className="d-flex align-items-center justify-content-center">
             <h6>{`Status: ${company.status}`}</h6>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-center">
             <h6>{`In House Contact: ${company.inHouseContact}`}</h6>
+            </Col>
+            </Row>
             <ul>
                 <li>{` CEO : ${company.info.ceo}`}</li>
                 <li>{` Founded : ${company.info.founded}`}</li>

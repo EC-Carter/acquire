@@ -1,11 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;600&family=Montserrat:wght@200&display=swap');
+/*  */
 
 body {
-  margin: 0;
-  font-family: 'Cormorant', serif;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+  height:100vh;
 }
 
+/* fonts */
+
+@font-face {
+  font-family: "Cormorant";
+  src: local("Cormorant"),
+  url('utilities/fonts/Cormorant/Cormorant-SemiBold.ttf') format("truetype");
+  font-weight:normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+  url('utilities/fonts/Montserrat/Montserrat-ExtraLight.ttf') format("truetype");
+  font-weight:lighter;
+  
+}
+
+.mont-font {
+  font-family:"Montserrat";
+}
+
+.cor-font{
+  font-family: "Cormorant";
+  
+}
+
+/* colors */
+
+/* RED : #CC0900 */
+/* WHITE : #F6F4F3 */
+/* TAN : #E6D4A7 */
+/* BLACK : #000000 */
+
+.bg-red{
+  background-color:#cc0a00;
+}
+
+.bg-dkgrey{
+  background-color:#343434;
+}
+
+.bg-white{
+  background-color:#F6F4F3;
+}
+
+.bg-tan{
+  background-color:#e6d4a74c;
+}
+
+.red{
+  color:#CC0900;
+}
+
+.black{
+  color:#2e2e2e;
+}
+
+.white{
+  color:#F6F4F3;
+}
+
+.tan{
+  color:#E6D4A7;
+}
+
+/* Sizing */
+
+.w-1em{
+ width:1em;
+}
+
+.w-15em{
+  width:15em;
+}
 

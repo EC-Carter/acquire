@@ -12,6 +12,10 @@ import reducer from './redux/reducers/reducer';
 //styles
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './utilities/fonts/Cormorant/Cormorant-SemiBold.ttf';
+import './utilities/fonts/Cormorant/Cormorant-Light.ttf';
+import './utilities/fonts/Montserrat/Montserrat-ExtraLight.ttf';
+
 
 //components
 import App from './App';
