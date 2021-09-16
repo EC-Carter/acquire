@@ -1,11 +1,9 @@
 
-import { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import { Button,Row,Col } from 'react-bootstrap'
-
-import { setInital } from '../redux/actions/actions';
 import { deleteTarget } from '../redux/actions/actions';
 import { setTargetToUpdate } from '../redux/actions/actions';
 
@@ -23,7 +21,7 @@ const MainDisplay = () => {
         
         {targets.map((target) => {
             return (
-            <>
+            
             <Row key={target.id} className="mx-5 my-2 bg-tan p-2 border-start border-end border-danger">
                 <Col md={5} className="d-flex align-items-center justify-content-center">
                 <p className="mont-font text-center">{target.info.companyName}</p>
@@ -39,7 +37,7 @@ const MainDisplay = () => {
                 </Col>
             
             </Row>
-            </>
+            
             )
         })}
        

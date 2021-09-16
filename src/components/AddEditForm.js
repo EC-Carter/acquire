@@ -72,7 +72,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             }
             
             
-        }, [])
+        }, [isEdit,company])
 
     const years = yearsBetween();
 
@@ -199,7 +199,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>Status</Form.Label>
                 <Form.Control as="select" onChange={(e) => setStatus(e.target.value)} value={status} className="rounded-0">
-                <option value="new" selected>new</option>
+                <option value="new" defaultValue >new</option>
                 <option value="pending">pending</option>
                 <option value="approved">approved</option>
                 <option value="declined">declined</option>

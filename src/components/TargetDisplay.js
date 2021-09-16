@@ -1,7 +1,7 @@
-import React, { useEffect,useState }from 'react';
+
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams,useHistory,Link } from 'react-router-dom';
+import { useHistory,Link } from 'react-router-dom';
 
 import { deleteTarget } from '../redux/actions/actions';
 import { setIsEdit } from '../redux/actions/actions';
@@ -14,20 +14,16 @@ import  AddEditForm from './AddEditForm';
 
 const TargetDisplay = () => {
 
-    const targets = useSelector(state => state.targets);
+    //const targets = useSelector(state => state.targets);
     const isEdit = useSelector(state => state.isEdit);
     const targetToUpdate = useSelector(state => state.targetToUpdate);
 
-    //const { name } = useParams();
+    
     const history = useHistory();
     const dispatch = useDispatch();  
     let company = targetToUpdate;
 
-    
-    console.log(targets)
-    console.log(company)
-            
-    
+
     const handleDelete = id => {
         dispatch(deleteTarget(id))
         history.push('/maindisplay')
@@ -46,22 +42,26 @@ const TargetDisplay = () => {
     return (
         <>
         {isEdit ? <AddEditForm formLabel={`Edit ${company.info.companyName}`} buttonText={"Update"} company={company}/>:
+        
         <div className="mont-font">
+
+            <Row md={5} className="mt-2 border border-danger mx-5 my-2 p-2 d-flex justify-content-center">
+            <h3 className="text-center" >{company.info.companyName}</h3>
+            </Row>
+
             <Row className="mt-2 bg-tan mx-5 my-2 p-2">
-            <Col md={5} className="d-flex align-items-center justify-content-center">
-            <h3 style={{display:"inline-block"}}>{company.info.companyName}</h3>
+            <Col className="d-flex align-items-center justify-content-center">
+            <Button onClick={()=>handleDelete(company.id)} variant="outline-dark" className="mont-font rounded-0 ms-2">Delete</Button>
             </Col>
             <Col className="d-flex align-items-center justify-content-center">
-            <Button className="ms-2" onClick={()=>handleDelete(company.id)} variant="outline-dark" className="mont-font rounded-0 ">Delete</Button>
+            <Button onClick={()=>handleEdit(company.id)} variant="outline-dark" className="mont-font rounded-0 ms-2">Edit</Button>
             </Col>
             <Col className="d-flex align-items-center justify-content-center">
-            <Button className="ms-2" onClick={()=>handleEdit(company.id)} variant="outline-dark" className="mont-font rounded-0 ">Edit</Button>
-            </Col>
-            <Col className="d-flex align-items-center justify-content-center">
-            <Button className="ms-2" as={Link} to="/maindisplay" variant="outline-dark" className="mont-font rounded-0 ">Back to main</Button>
+            <Button as={Link} to="/maindisplay" variant="outline-dark" className="mont-font rounded-0 ms-2">Back to main</Button>
             </Col>
             </Row>
-            <Row>
+
+            <Row className=" mt-2 mx-5 my-2 p-2">
             <Col className="d-flex align-items-center justify-content-center">
             <h6>{`Status: ${company.status}`}</h6>
             </Col>
@@ -69,33 +69,46 @@ const TargetDisplay = () => {
             <h6>{`In House Contact: ${company.inHouseContact}`}</h6>
             </Col>
             </Row>
-            <ul>
-                <li>{` CEO : ${company.info.ceo}`}</li>
-                <li>{` Founded : ${company.info.founded}`}</li>
-                <li>{` Industry : ${company.info.industry}`}</li>
-                <li>{` Located : ${company.info.location.city}, ${company.info.location.state}`}</li>
-            </ul>
 
-            <h5>Company Contacts</h5>
-            {company.keyContacts.map(contact =>{
+            <Row className="mt-2 bg-tan mx-5 my-2 p-2">
+            
+                <Col sm={12} md={true}>
+                <p className="p-0 text-center">{` CEO : ${company.info.ceo}`}</p>
+                <p className="p-0 text-center">{` Founded : ${company.info.founded}`}</p>
+                </Col>
+                <Col sm={12} md={true}>
+                <p className="p-0 text-center">{` Industry : ${company.info.industry}`}</p>
+                <p className="p-0 text-center">{` Located : ${company.info.location.city}, ${company.info.location.state}`}</p>
+                </Col>
+            
+            </Row>
+
+            <h5 className="text-center">Company Contacts</h5>
+        <Row className="mt-2 bg-tan mx-5 my-2 p-2">
+            {company.keyContacts.map((contact,index) =>{
                 return (
-                    <>
-                    <h6>{contact.name}</h6>
+                    <Col sm={12} md={true} key={index}>
+                    <h6 className="">{contact.name}</h6>
+                    <div  className=" border-top border-danger mt-1">
 
-                    <ul>
-                    <li>{`Role: ${contact.role}`}</li>
-                    <li>{`Phone: ${contact.phone}`}</li>
-                    <li>{`Email: ${contact.email}`}</li>
-                    </ul>
-                    </>
+                    
+                    <p>{`Role: ${contact.role}`}</p>
+                    <p>{`Phone: ${contact.phone}`}</p>
+                    <p>{`Email: ${contact.email}`}</p>
+                    </div>
+                    </Col>
                 )
             })}
+            
+        </Row>
 
-            <h5>Financial Information</h5>
-            {company.financialRecords.map(record => {
+            <h5 className="text-center">Financial Information</h5>
+        <Row className="mt-2 bg-tan mx-5 my-2 p-2">
+            {company.financialRecords.map((record,index) => {
                 return(
-                <>
+                <Col sm={12} md={true} key={index}>
                 <h6>{record.year}</h6>
+                <div className="border-top border-danger mt-1">
 
                 <ul>
                 <li>{`Revenue: ${record.revenue}`}</li>
@@ -105,10 +118,12 @@ const TargetDisplay = () => {
                 <li>{`Taxes: ${record.taxes}`}</li>
                 <li>{`Net Earnings: ${record.netEarnings}`}</li>
                 </ul>
-                </>
+                </div>
+                </Col>
                 )
 
             })}
+        </Row>
 
                 
         
