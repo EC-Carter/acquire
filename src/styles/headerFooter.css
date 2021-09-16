@@ -1,0 +1,15 @@
+.hf-height{
+    height:15vh;
+}
+
+.base-height{
+    height:100vh;
+}
+
+.main{
+    min-height:80vh;
+}
+
+.logo{
+    font-size: 4em;
+}
