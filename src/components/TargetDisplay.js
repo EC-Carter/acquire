@@ -45,7 +45,7 @@ const TargetDisplay = () => {
         
         <div className="mont-font">
 
-            <Row md={5} className="mt-2 border border-danger mx-5 my-2 p-2 d-flex justify-content-center">
+            <Row md={5} className="mt-2 border-bottom border-danger mx-5 my-2 p-2 d-flex justify-content-center">
             <h3 className="text-center" >{company.info.companyName}</h3>
             </Row>
 
