@@ -241,11 +241,17 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 <Form.Group className="p-2" >
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control name="phone" onChange={e => handleContactChange(e, index)} value={contact.phone} type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" className="rounded-0" />
+                    <Form.Text className="text-muted">
+                    000-000-0000
+                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="p-2" >
                     <Form.Label>email</Form.Label>
                     <Form.Control name="email" onChange={e => handleContactChange(e, index)} value={contact.email} type="email" placeholder="Email" className="rounded-0"/>
+                    <Form.Text className="text-muted">
+                    name@email.com
+                    </Form.Text>
                 </Form.Group>
 
                 {contactList.length !== 1 && <Button onClick={() => handleRemoveContact(index)} variant="outline-dark" className="mont-font rounded-0 ms-2">Remove</Button>}
