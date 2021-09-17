@@ -45,7 +45,7 @@ const loadFromSessionStorage = () => {
   }
 }
 
- const persistedState = loadFromSessionStorage();
+const persistedState = loadFromSessionStorage();
 
 let store = createStore(reducer,persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 

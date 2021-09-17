@@ -15,7 +15,7 @@ const MainDisplay = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [newTargets,setNewTargets] = useState(targets);
-    console.log(newTargets)
+   
 
     useEffect(() => {
         setNewTargets([...targets])
@@ -24,7 +24,7 @@ const MainDisplay = () => {
 
     const handleDelete = (id) => {
         dispatch(deleteTarget(id));
-        //setNewTargets([...targets]);
+        
         
     }
     
@@ -34,8 +34,6 @@ const MainDisplay = () => {
         setSearchTerm('')
     }
     
-
-
     return (
         <>
         <Row  className="mx-5 my-2 p-2">
@@ -44,7 +42,7 @@ const MainDisplay = () => {
 
 
         <Row className ="mx-5 my-2 p-2 ">
-            <ButtonGroup >
+            <ButtonGroup vertical >
                 
                 <Button variant="outline-dark" className="mont-font rounded-0 mt-1 buttonGroup"
                 onClick={()=>setNewTargets(alpha([...targets]))}
@@ -90,17 +88,17 @@ const MainDisplay = () => {
             return (
             
             <Row key={target.id} className="mx-5 my-2 bg-tan p-2 border-start border-end border-danger">
-                <Col md={5} className="d-flex align-items-center justify-content-center">
+                <Col sm={12} md={5} className="d-flex align-items-center justify-content-center">
                 <p className="mont-font text-center">{target.info.companyName}</p>
                 </Col>
-                <Col className="d-flex align-items-center justify-content-center">
+                <Col sm={12} md={true} className="d-flex align-items-center justify-content-center">
                 <p className="mont-font text-center">{target.status}</p>
                 </Col>
-                <Col className="d-flex align-items-center justify-content-center ">
-                <Button as={Link} to={`/detail/${target.info.companyName}`} onClick={() => dispatch(setTargetToUpdate(target))} variant="outline-dark" className="mont-font rounded-0">More</Button>
+                <Col sm={12} md={true} className="d-flex align-items-center justify-content-center ">
+                <Button as={Link} to={`/detail/${target.info.companyName}`} onClick={() => dispatch(setTargetToUpdate(target))} variant="outline-dark" className="mont-font rounded-0 mt-1">More</Button>
                 </Col>
-                <Col className="d-flex align-items-center justify-content-center">
-                <Button onClick={()=>handleDelete(target.id)} variant="outline-dark" className="mont-font rounded-0 ">Delete</Button>
+                <Col sm={12} md={true} className="d-flex align-items-center justify-content-center">
+                <Button onClick={()=>handleDelete(target.id)} variant="outline-dark" className="mont-font rounded-0 mt-1">Delete</Button>
                 </Col>
             
             </Row>

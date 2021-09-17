@@ -9,7 +9,6 @@ const Header = () => {
                 <h1 className="text-center cor-font logo">acquire<span className="red">.</span></h1> 
             </Col>   
         </Row>
-       
     )
 }
 

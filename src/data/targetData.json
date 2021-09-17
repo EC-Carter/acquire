@@ -8,20 +8,20 @@
             "city":"Dallas",
             "state":"Texas"
         },
-        "industry":"education"
+        "industry":"Education"
     },
     "status":"new",
     "keyContacts":[
         {
             "name":"Joe Jones",
             "role":"CFO",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"joe@abccompany.com"
         },
         {
             "name":"Meg Miller",
             "role":"VP of Opperations",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"meg@abccompany.com"
         }
         
@@ -74,13 +74,13 @@
         {
             "name":"Abigail Adams",
             "role":"VP of Operations",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"abigail@company.com"
         },
         {
             "name":"Jon Jones",
             "role":"Some Important Role",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"jon@company.com"
         }
         
@@ -88,30 +88,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":1000000,
-            "grossProfit":800000,
-            "totalExpenses":362900,
-            "preTaxEarnings":437100,
-            "taxes":240000,
-            "netEarnings":197100
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Bill Bass"
@@ -133,37 +133,37 @@
         {
             "name":"Rhonda Rol",
             "role":"Something Important",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"rhonda@company.com"
         }
     ],
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Mindy Mousie"
@@ -185,7 +185,7 @@
         {
             "name":"Judy Blume",
             "role":"Author",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"judy@company.com"
         },
         {
@@ -199,30 +199,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Jane Doe"
@@ -244,7 +244,7 @@
         {
             "name":"Michael Scott",
             "role":"Regonal Manager",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"michael@company.com"
         }
         
@@ -252,30 +252,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Mindy Mousie"
@@ -297,13 +297,13 @@
         {
             "name":"M.R. Niceguy",
             "role":"CFO",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"mr@company.com"
         },
         {
             "name":"Norm Nally",
             "role":"VP of Sales",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"norm@company.com"
         }
         
@@ -311,30 +311,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Bill Bass"
@@ -356,37 +356,37 @@
         {
             "name":"Jimmy Dean",
             "role":"Director of Breakfast Foods",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"jimmy@company"
         }
     ],
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Mindy Mousie"
@@ -408,19 +408,19 @@
         {
             "name":"Charlie Daycat",
             "role":"Ruler of the nightcat",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"charles@company.com"
         },
         {
             "name":"Kitten Mittens",
             "role":"mitten tester",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"kitten@company.com"
         },
         {
             "name":"Turtle Meow",
             "role":"bug chaser",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"turtle@company.com"
         }
         
@@ -428,30 +428,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Bill Bass"
@@ -473,13 +473,13 @@
         {
             "name":"Jackson Pollock",
             "role":"The color guy",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"jackson@company.com"
         },
         {
             "name":"Mary Cassatt",
             "role":"Painter extraordinaire",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"mary@company.com"
         }
         
@@ -487,30 +487,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Jane Doe"
@@ -518,7 +518,7 @@
 {
     "id":"e74d358c-f290-4388-8787-84785cbf1815",
     "info":{
-        "companyName":"Oh boy Records",
+        "companyName":"Oh Boy Records",
         "founded":1998,
         "ceo":"John Prine",
         "location":{
@@ -532,13 +532,13 @@
         {
             "name":"Dan Reeder",
             "role":"Recoding Artist",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"dan@company.com"
         },
         {
             "name":"Emily Scott Robinson",
             "role":"Recording Artist",
-            "phone": 1231231234,
+            "phone": "123-123-1234",
             "email":"emily@company.com"
         }
         
@@ -546,30 +546,30 @@
     "financialRecords":[
         {
             "year":"2020",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":300000,
+            "grossProfit":224400,
+            "totalExpenses":150000,
+            "preTaxEarnings":74400,
+            "taxes":7440,
+            "netEarnings":67000
         },
         {
             "year":"2019",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":258963,
+            "grossProfit":168963,
+            "totalExpenses":96963,
+            "preTaxEarnings":72000,
+            "taxes":7200,
+            "netEarnings":64800
         },
         {
             "year":"2018",
-            "revenue":0,
-            "grossProfit":0,
-            "totalExpenses":0,
-            "preTaxEarnings":0,
-            "taxes":0,
-            "netEarnings":0
+            "revenue":315000,
+            "grossProfit":225000,
+            "totalExpenses":60000,
+            "preTaxEarnings":165000,
+            "taxes":16500,
+            "netEarnings":148500
         }
     ],
     "inHouseContact":"Jane Doe"
