@@ -47,7 +47,7 @@ const MainDisplay = () => {
             <ButtonGroup >
                 
                 <Button variant="outline-dark" className="mont-font rounded-0 mt-1 buttonGroup"
-                onClick={()=>setNewTargets(alpha(targets))}
+                onClick={()=>setNewTargets(alpha([...targets]))}
                 >Sort A-Z</Button>
                 
                 <DropdownButton as={ButtonGroup} variant="outline-dark" className="mont-font rounded-0 mt-1" title="Filter by Status">
@@ -59,7 +59,7 @@ const MainDisplay = () => {
                 </DropdownButton>
 
                 <Button variant="outline-dark" className="mont-font rounded-0 mt-1"
-                onClick={()=>setNewTargets(revAlpha(targets))}
+                onClick={()=>setNewTargets(revAlpha([...targets]))}
                 > Sort Z-A</Button>
             </ButtonGroup>
             <Form onSubmit={handleSubmit}>
