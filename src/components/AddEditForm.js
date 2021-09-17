@@ -169,8 +169,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>Year Founded</Form.Label>
                 <Form.Control as="select" onChange={(e) => setFounded(e.target.value)} value={founded} className="rounded-0" >
-                    {years.map(year => {
-                        return  <option value={year}>{year}</option>
+                    {years.map((year,index) => {
+                        return  <option key={index} value={year}>{year}</option>
                     })}
                 </Form.Control>
             </Form.Group>
@@ -190,8 +190,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>State</Form.Label>
                 <Form.Control as="select" onChange={(e) => setState(e.target.value)} value={state} className="rounded-0" >
-                    {stateArray.map(state => {
-                        return  <option value={state}>{state}</option>
+                    {stateArray.map((state,index) => {
+                        return  <option  key={index} value={state}>{state}</option>
                     })}
                 </Form.Control>
             </Form.Group>
@@ -227,7 +227,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
 
             {contactList.map((contact,index) => {
                 return(
-                <>    
+                <div key={index}>    
                 <Form.Group className="p-2 mt-3" >
                     <Form.Label>Name</Form.Label>
                     <Form.Control name="name" onChange={e => handleContactChange(e, index)} value={contact.name} type="text" placeholder="Contact name" className="rounded-0" />
@@ -257,7 +257,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 {contactList.length !== 1 && <Button onClick={() => handleRemoveContact(index)} variant="outline-dark" className="mont-font rounded-0 ms-2">Remove</Button>}
 
                 {contactList.length -1 === index && <Button onClick={handleAddContact} variant="outline-dark" className="mont-font rounded-0 ms-2 ">Add</Button>}
-                </>
+                </div>
 
                 )
                 
@@ -269,8 +269,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>Year 1</Form.Label>
                 <Form.Control as="select" name="year" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.year} className="rounded-0">
-                {fiYears.map(year => {
-                    return  <option value={year}>{year}</option>
+                {fiYears.map((year,index) => {
+                    return  <option key={index} value={year}>{year}</option>
                 })}
                 </Form.Control>
             </Form.Group>
@@ -324,8 +324,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>Year 2</Form.Label>
                 <Form.Control as="select" name="year" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.year} className="rounded-0">
-                {fiYears.map(year => {
-                    return  <option value={year}>{year}</option>
+                {fiYears.map((year,index) => {
+                    return  <option key={index} value={year}>{year}</option>
                 })}
                 </Form.Control>
             </Form.Group>
@@ -380,8 +380,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Form.Group className="p-2" >
                 <Form.Label>Year 3</Form.Label>
                 <Form.Control as="select" name="year" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.year} className="rounded-0">
-                {fiYears.map(year => {
-                    return  <option value={year}>{year}</option>
+                {fiYears.map((year,index) => {
+                    return  <option key={index} value={year}>{year}</option>
                 })}
                 </Form.Control>
             </Form.Group>
