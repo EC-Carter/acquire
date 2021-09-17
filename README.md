@@ -26,13 +26,14 @@ As I continue working on this project I would like to focus on:
 
 
 ### Dependencies used
+  - Create-react-app
   - Bootstrap
   - React
   - React Bootstrap
   - React Redux
   - React Router Dom
   - Redux
-  - uuid
+  - UUID
  
 
 
