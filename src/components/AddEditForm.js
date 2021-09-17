@@ -94,7 +94,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
     }
 
     const handleAddContact = () => {
-        setContactList([...contactList,[{name:"",role:"",phone:"",email:""}]])
+        setContactList([...contactList,{name:"",role:"",phone:"",email:""}])
     }
 
     const handleSubmit = (e) => {
