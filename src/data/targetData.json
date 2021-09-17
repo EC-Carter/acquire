@@ -6,7 +6,7 @@
         "ceo":"Rebecca Roberts",
         "location":{
             "city":"Dallas",
-            "state":"Texas"
+            "state":"TX"
         },
         "industry":"Education"
     },
@@ -20,7 +20,7 @@
         },
         {
             "name":"Meg Miller",
-            "role":"VP of Opperations",
+            "role":"VP of Operations",
             "phone": "123-123-1234",
             "email":"meg@abccompany.com"
         }
@@ -65,7 +65,7 @@
         "ceo":"Laurie Lee",
         "location":{
             "city":"Richmond",
-            "state":"Virginia"
+            "state":"VA"
         },
         "industry":"Food Distribution"
     },
@@ -124,7 +124,7 @@
         "ceo":"Sam Guy",
         "location":{
             "city":"Raleigh",
-            "state":"North Carolina"
+            "state":"NC"
         },
         "industry":"Vitamins"
     },
@@ -176,7 +176,7 @@
         "ceo":"LeVar Burton",
         "location":{
             "city":"Los Angeles",
-            "state":"Califonia"
+            "state":"CA"
         },
         "industry":"Publishing"
     },
@@ -191,7 +191,7 @@
         {
             "name":"Arnold Loble",
             "role":"Author",
-            "phone": 1231231234,
+            "phone":"123-123-1234",
             "email":"arnold@company.com"
         }
         
@@ -235,7 +235,7 @@
         "ceo":"David Wallace",
         "location":{
             "city":"New York",
-            "state":"New York"
+            "state":"NY"
         },
         "industry":"Paper"
     },
@@ -288,7 +288,7 @@
         "ceo":"A. Reallygreat Gal",
         "location":{
             "city":"Atlanta",
-            "state":"Georgia"
+            "state":"GA"
         },
         "industry":"Something Amazing"
     },
@@ -347,7 +347,7 @@
         "ceo":"Haman Cheese",
         "location":{
             "city":"Philadelphia",
-            "state":"Pennsylvania"
+            "state":"PA"
         },
         "industry":"Food"
     },
@@ -399,7 +399,7 @@
         "ceo":"Betty Carter",
         "location":{
             "city":"Smithfield",
-            "state":"North Carolina"
+            "state":"NC"
         },
         "industry":"Pet Care"
     },
@@ -464,7 +464,7 @@
         "ceo":"Bob Ross",
         "location":{
             "city":"Chicago",
-            "state":"Illinois"
+            "state":"IL"
         },
         "industry":"Art Supplies"
     },
@@ -523,7 +523,7 @@
         "ceo":"John Prine",
         "location":{
             "city":"Nashville",
-            "state":"Tennessee"
+            "state":"TN"
         },
         "industry":"Music"
     },

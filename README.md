@@ -17,12 +17,13 @@ Thanks for giving me the opportunity to submit a project for your consideration!
 
 ## Next Steps
 As I continue working on this project I would like to focus on:
-  - Refactoring AddEditForm.js to make use of nested form sections in separate components
-  - Refine responsive flow at all breakpoints, specifically the search and sort features
+  - Refactoring AddEditForm.js to make use of nested form components and clean up the lengthy financial info portion of the form
+  - Refine responsive behavior at all breakpoints, specifically the search and sort features
   - Add pagination to results shown in MainDisplay.js
+  - Include more options in the search and sort feature
   - Add custom error handling for form
   - Refactor and add elements to increase accessibility 
-  -  Add charts to visualize financial datasets 
+  - Add charts to visualize financial datasets in TargetDisplay.js
 
 
 ### Dependencies used
