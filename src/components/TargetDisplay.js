@@ -8,6 +8,7 @@ import { setIsEdit } from '../redux/actions/actions';
 
 
 import { Button,Row,Col } from 'react-bootstrap';
+import '../styles/targetDisplay.css'
 
 import  AddEditForm from './AddEditForm';
 
@@ -83,7 +84,7 @@ const TargetDisplay = () => {
             
             </Row>
 
-            <h5 className="text-center">Company Contacts</h5>
+            <h5 className="text-center p-3">Company Contacts</h5>
         <Row className="mt-2 bg-tan mx-5 my-2 p-2">
             {company.keyContacts.map((contact,index) =>{
                 return (
@@ -102,8 +103,8 @@ const TargetDisplay = () => {
             
         </Row>
 
-            <h5 className="text-center">Financial Information</h5>
-        <Row className="mt-2 bg-tan mx-5 my-2 p-2">
+            <h5 className="text-center p-3">Financial Information</h5>
+        <Row className="mt-2 bg-tan mx-5 my-2 mb-5 p-2">
             {company.financialRecords.map((record,index) => {
                 return(
                 <Col sm={12} md={true} key={index}>
@@ -111,12 +112,12 @@ const TargetDisplay = () => {
                 <div className="border-top border-danger mt-1">
 
                 <ul>
-                <li>{`Revenue: ${record.revenue}`}</li>
-                <li>{`Gross Profit: ${record.grossProfit}`}</li>
-                <li>{`Total Expenses: ${record.totalExpenses}`}</li>
-                <li>{`Pre-tax earnings: ${record.preTaxEarnings}`}</li>
-                <li>{`Taxes: ${record.taxes}`}</li>
-                <li>{`Net Earnings: ${record.netEarnings}`}</li>
+                <li>{`Revenue: $${record.revenue}`}</li>
+                <li>{`Gross Profit: $${record.grossProfit}`}</li>
+                <li>{`Total Expenses: $${record.totalExpenses}`}</li>
+                <li>{`Pre-tax earnings: $${record.preTaxEarnings}`}</li>
+                <li>{`Taxes: $${record.taxes}`}</li>
+                <li>{`Net Earnings: $${record.netEarnings}`}</li>
                 </ul>
                 </div>
                 </Col>

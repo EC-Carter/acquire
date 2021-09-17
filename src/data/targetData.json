@@ -520,7 +520,7 @@
     "info":{
         "companyName":"Oh boy Records",
         "founded":1998,
-        "ceo":"Jone Prine",
+        "ceo":"John Prine",
         "location":{
             "city":"Nashville",
             "state":"Tennessee"
@@ -575,3 +575,4 @@
     "inHouseContact":"Jane Doe"
 }
 ]
+

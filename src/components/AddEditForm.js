@@ -55,6 +55,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
         "taxes":0,
         "netEarnings":0
         })
+    const [inHouseContact, setInHouseContact] = useState('')
 
         useEffect(() => {
             if(isEdit){
@@ -69,12 +70,15 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 setFl1(company.financialRecords[0]);
                 setFl2(company.financialRecords[0]);
                 setFl3(company.financialRecords[0]);
+                setInHouseContact(company.inHouseContact);
+
             }
             
             
         }, [isEdit,company])
 
     const years = yearsBetween();
+    const fiYears = yearsBetween(2015);
 
     const handleContactChange = (e, index) => {
         const {name,value} = e.target;
@@ -90,7 +94,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
     }
 
     const handleAddContact = () => {
-        setContactList([...contactList,[{name:"",role:"",phone:"",email:""}]])
+        setContactList([...contactList,{name:"",role:"",phone:"",email:""}])
     }
 
     const handleSubmit = (e) => {
@@ -105,16 +109,17 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                     location:{
                         city,
                         state
-                    }
+                    },
+                    industry
                 },
-                    industry,
                     status,
                     keyContacts:contactList,
                     financialRecords:[
                         fl1,
                         fl2,
                         fl3
-                    ]                
+                    ],
+                    inHouseContact                
             }
             dispatch(updateTarget(newTarget));
             dispatch(setIsEdit(false))
@@ -131,16 +136,17 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 location:{
                     city,
                     state
-                }
+                },
+                industry
             },
-                industry,
                 status,
                 keyContacts:contactList,
                 financialRecords:[
                     fl1,
                     fl2,
                     fl3
-                ]
+                ],
+                inHouseContact
             
         }
         dispatch(addTarget(newTarget));
@@ -157,7 +163,7 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
         <h3 className="text-center">Company Information</h3>
             <Form.Group className="p-2" >
                 <Form.Label>Company Name</Form.Label>
-                <Form.Control onChange={(e) => setCompanyName(e.target.value)} value={companyName} type="text" placeholder="Company name" className="rounded-0" />
+                <Form.Control onChange={(e) => setCompanyName(e.target.value)} value={companyName} type="text" placeholder="Company name" required className="rounded-0" />
             </Form.Group>
 
             <Form.Group className="p-2" >
@@ -195,7 +201,8 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 <Form.Label>Industry</Form.Label>
                 <Form.Control onChange={(e) => setIndustry(e.target.value)} value={industry} type="text" placeholder="Industry" className="rounded-0" />
             </Form.Group>
-
+            <Row>
+            <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Status</Form.Label>
                 <Form.Control as="select" onChange={(e) => setStatus(e.target.value)} value={status} className="rounded-0">
@@ -204,8 +211,16 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
                 <option value="approved">approved</option>
                 <option value="declined">declined</option>
                     
-                </Form.Control>
+                </Form.Control>    
             </Form.Group>
+            </Col>
+            <Col>
+            <Form.Group className="p-2">
+                <Form.Label>In House Contact</Form.Label>
+                <Form.Control onChange={(e) => setInHouseContact(e.target.value)} value={inHouseContact} type="text" placeholder="In House Contact" className="rounded-0" />
+            </Form.Group>
+            </Col>
+            </Row>
             </div>
             <div className="bg-tan mx-5 my-2 p-2 border-end  border-danger">
             <h3 className="text-center">Contacts</h3>
@@ -247,19 +262,23 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <div className=" border-start border-danger mt-2">
             <Form.Group className="p-2" >
                 <Form.Label>Year 1</Form.Label>
-                <Form.Control name="year" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.year}  placeholder="Year" className="rounded-0"/>
+                <Form.Control as="select" name="year" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.year} className="rounded-0">
+                {fiYears.map(year => {
+                    return  <option value={year}>{year}</option>
+                })}
+                </Form.Control>
             </Form.Group>
             <Row>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Revenue</Form.Label>
-                <Form.Control name="revenue" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.revenue}  placeholder="Revenue" className="rounded-0"/>
+                <Form.Control name="revenue" type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.revenue}  placeholder="Revenue" className="rounded-0"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Gross Profit</Form.Label>
-                <Form.Control name="grossProfit" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
+                <Form.Control name="grossProfit"  type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -268,13 +287,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Total Expenses</Form.Label>
-                <Form.Control name="totalExpenses" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.totalExpenses}  placeholder="Total Expenses" className="rounded-0"/>
+                <Form.Control name="totalExpenses" type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.totalExpenses}  placeholder="Total Expenses" className="rounded-0"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Pre Tax Earnings</Form.Label>
-                <Form.Control name="preTaxEarnings" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
+                <Form.Control name="preTaxEarnings" type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -283,13 +302,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Taxes</Form.Label>
-                <Form.Control name="taxes" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.taxes}  placeholder="Taxes" className="rounded-0"/>
+                <Form.Control name="taxes" type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.taxes}  placeholder="Taxes" className="rounded-0"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Net Earnings</Form.Label>
-                <Form.Control name="netEarnings" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
+                <Form.Control name="netEarnings" type="number" onChange={e=>setFl1({...fl1,[e.target.name]:e.target.value})} value={fl1.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -298,20 +317,24 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <div className=" border-end border-danger mt-2">
             <Form.Group className="p-2" >
                 <Form.Label>Year 2</Form.Label>
-                <Form.Control name="year" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.year}  placeholder="Year" className="rounded-0"/>
+                <Form.Control as="select" name="year" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.year} className="rounded-0">
+                {fiYears.map(year => {
+                    return  <option value={year}>{year}</option>
+                })}
+                </Form.Control>
             </Form.Group>
 
             <Row>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Revenue</Form.Label>
-                <Form.Control name="revenue" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.revenue}  placeholder="Revenue" className="rounded-0"/>
+                <Form.Control name="revenue" type="number" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.revenue}  placeholder="Revenue" className="rounded-0"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Gross Profit</Form.Label>
-                <Form.Control name="grossProfit" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
+                <Form.Control name="grossProfit" type="number" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -320,13 +343,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Total Expenses</Form.Label>
-                <Form.Control name="totalExpenses" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.totalExpenses}  placeholder="Total Expenses" className="rounded-0" />
+                <Form.Control name="totalExpenses" type="number" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.totalExpenses}  placeholder="Total Expenses" className="rounded-0" />
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Pre Tax Earnings</Form.Label>
-                <Form.Control name="preTaxEarnings" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
+                <Form.Control name="preTaxEarnings" type="number" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -335,13 +358,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Taxes</Form.Label>
-                <Form.Control name="taxes" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.taxes}  placeholder="Taxes" className="rounded-0"/>
+                <Form.Control name="taxes" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.taxes}  placeholder="Taxes" type="number" className="rounded-0"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Net Earnings</Form.Label>
-                <Form.Control name="netEarnings" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
+                <Form.Control name="netEarnings" type="number" onChange={e=>setFl2({...fl2,[e.target.name]:e.target.value})} value={fl2.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -350,20 +373,24 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <div className=" border-start border-danger mt-2">
             <Form.Group className="p-2" >
                 <Form.Label>Year 3</Form.Label>
-                <Form.Control name="year" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.year}  placeholder="Year" className="rounded-0" />
+                <Form.Control as="select" name="year" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.year} className="rounded-0">
+                {fiYears.map(year => {
+                    return  <option value={year}>{year}</option>
+                })}
+                </Form.Control>
             </Form.Group>
 
             <Row>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Revenue</Form.Label>
-                <Form.Control name="revenue" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.revenue}  placeholder="Revenue" className="rounded-0" />
+                <Form.Control name="revenue"  type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.revenue}  placeholder="Revenue" className="rounded-0" />
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Gross Profit</Form.Label>
-                <Form.Control name="grossProfit" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
+                <Form.Control name="grossProfit"  type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.grossProfit}  placeholder="Gross Profit" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -372,13 +399,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Total Expenses</Form.Label>
-                <Form.Control name="totalExpenses" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.totalExpenses}  placeholder="Total Expenses" className="rounded-0" />
+                <Form.Control name="totalExpenses"  type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.totalExpenses}  placeholder="Total Expenses" className="rounded-0" />
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Pre Tax Earnings</Form.Label>
-                <Form.Control name="preTaxEarnings" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
+                <Form.Control name="preTaxEarnings" type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.preTaxEarnings}  placeholder="Pre-tax earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
@@ -387,13 +414,13 @@ const AddEditForm = ({formLabel,buttonText,company}) => {
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Taxes</Form.Label>
-                <Form.Control name="taxes" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.taxes}  placeholder="Taxes" className="rounded-0" />
+                <Form.Control name="taxes" type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.taxes}  placeholder="Taxes" className="rounded-0" />
             </Form.Group>
             </Col>
             <Col>
             <Form.Group className="p-2" >
                 <Form.Label>Net Earnings</Form.Label>
-                <Form.Control name="netEarnings" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
+                <Form.Control name="netEarnings" type="number" onChange={e=>setFl3({...fl3,[e.target.name]:e.target.value})} value={fl3.netEarnings}  placeholder="Net Earnings" className="rounded-0"/>
             </Form.Group>
             </Col>
             </Row>
