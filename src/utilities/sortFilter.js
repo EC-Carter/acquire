@@ -1,7 +1,7 @@
 
 
 export const alpha = (targets) => {
-    return targets.sort((a,b) => {
+    return [...targets.sort((a,b) => {
             let aName = a.info.companyName.toLowerCase();
             let bName = b.info.companyName.toLowerCase();
             if(aName < bName){
@@ -12,11 +12,11 @@ export const alpha = (targets) => {
             }
             return 0;
         })
-
+]
 }
 
 export const revAlpha = (targets) => {
-    return targets.sort((a,b) => {
+    return [...targets.sort((a,b) => {
             let aName = a.info.companyName.toLowerCase();
             let bName = b.info.companyName.toLowerCase();
             if(aName < bName){
@@ -27,7 +27,7 @@ export const revAlpha = (targets) => {
             }
             return 0;
         })
-
+    ]
 }
 
 export const status = (targets,status) => {

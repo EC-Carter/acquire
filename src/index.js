@@ -18,7 +18,7 @@ import './utilities/fonts/Montserrat/Montserrat-ExtraLight.ttf';
 
 
 //components
-import App from './App';
+import App from './App'
 import BaseLayout from './components/layout/BaseLayout';
 import MainDisplay from './components/MainDisplay';
 import TargetDisplay from './components/TargetDisplay';

@@ -17,9 +17,9 @@ const MainDisplay = () => {
     const [newTargets,setNewTargets] = useState(targets);
    
 
-    useEffect(() => {
-        setNewTargets([...targets])
-    },[targets])
+    // useEffect(() => {
+    //     setNewTargets([...targets])
+    // },[targets])
 
 
     const handleDelete = (id) => {
@@ -32,6 +32,18 @@ const MainDisplay = () => {
         e.preventDefault();
         setNewTargets(search(newTargets,searchTerm))
         setSearchTerm('')
+    }
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setSearchTerm(e.target.value)
+        setNewTargets(search(newTargets,searchTerm))
+        console.log( '41',searchTerm)
+        console.log('42',e.target.value)
+        if (e.target.value === ''){
+            
+            setNewTargets([...targets])
+        }
     }
     
     return (
@@ -76,7 +88,7 @@ const MainDisplay = () => {
                         className="rounded-0 border-dark"
                         type="text"
                         value={searchTerm}
-                        onChange={e => setSearchTerm(e.target.value)}                
+                        onChange={e => handleSearch(e) }                
                         />                        
                     </InputGroup>
                 </Form.Group>
